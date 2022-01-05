@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/d3.v4.min.js"></script>
+</head>
+<body>
+    <script>
+        function drawCircle(context, radius) {
+            context.moveTo(radius, 0);
+            context.arc(0, 0, radius, 0, 2 * Math.PI);
+        }
+        var context = d3.path();
+        drawCircle(context, 40);
+        pathElement.setAttribute("d", context.toString());
+    </script>
+</body>
+</html>
